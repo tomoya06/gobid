@@ -4,18 +4,19 @@ const arnums = /^[٠١٢٣٤٥٦٧٨٩]{3}$/;
 const arnums10k = /^[٠١٢٣٤٥٦٧٨٩]{4}$/;
 
 const langPtns: [RegExp, string][] = [
-  [jpnums, '999JP'],
   [cnnums, '999CN'],
+  [jpnums, '999JP'],
   [arnums, 'Arabic999'],
   [arnums10k, 'Arabic10K'],
 ];
 
 export const langfunc: PatternFunc = (input) => {
+  const output: string[] = [];
   for (let i = 0; i < langPtns.length; i++) {
     if (langPtns[i][0].test(input)) {
-      return [langPtns[i][1]];
+      output.push(langPtns[i][1]);
     }
   }
 
-  return [];
+  return output;
 };

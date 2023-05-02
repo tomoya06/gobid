@@ -1,5 +1,5 @@
 function isStraight(input: string, lo: number, hi: number): boolean {
-  for (let i = lo, cnt = 0; i < hi; i++, cnt++) {
+  for (let i = lo, cnt = 0; i <= hi; i++, cnt++) {
     if (input.charCodeAt(i) - input.charCodeAt(lo) !== cnt) {
       return false;
     }
