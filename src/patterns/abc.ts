@@ -57,13 +57,13 @@ export const abcfunc: PatternFunc = (input) => {
   }
 
   const visited: Record<string, number> = {};
-  let cnt = 0;
+  let cnt = 1;
   let myptn = '';
   for (let i = 0; i < input.length; i++) {
     if (!visited[input.charAt(i)]) {
       visited[input.charAt(i)] = cnt++;
     }
-    myptn += `${String.fromCharCode(visited[input.charAt(i)] + 65)}`;
+    myptn += `${String.fromCharCode(visited[input.charAt(i)] + 64)}`;
   }
 
   if (validPtns.includes(myptn)) {
