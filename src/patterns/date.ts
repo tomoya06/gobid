@@ -9,7 +9,7 @@ export const datefunc: PatternFunc = (input) => {
     months[Number(mat[1])] >= Number(mat[2]) &&
     Number(mat[2]) > 0
   ) {
-    return ['生日号'];
+    return ['MMDD'];
   }
   return [];
 };

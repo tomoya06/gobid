@@ -4,10 +4,11 @@ export const nynyfunc: PatternFunc = (input) => {
   if (
     mat &&
     mat[0] &&
+    Number(mat[0]) >= 1 &&
     Number(mat[0]) <= Number(mat[1]) &&
     Number(mat[0]) * Number(mat[1]) === Number(mat[2])
   ) {
-    return ['99乘法表'];
+    return ['TimesTable'];
   }
 
   return [];

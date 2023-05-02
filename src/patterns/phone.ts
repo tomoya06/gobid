@@ -51,7 +51,7 @@ export const phonefunc: PatternFunc = (input) => {
     phonePrefixes.includes(mat[1]) &&
     Number(mat[2]) % 11111111 === 0
   ) {
-    return ['豹子手机号'];
+    return ['XXXAAAAAAAA'];
   }
 
   return [];
