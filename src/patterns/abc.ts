@@ -52,6 +52,10 @@ const validPtns = [
 ];
 
 const abcfunc: PatternFunc = (input) => {
+  if (!/^\d+$/.test(input)) {
+    return [];
+  }
+
   const visited: Record<string, number> = {};
   let cnt = 0;
   let myptn = '';
