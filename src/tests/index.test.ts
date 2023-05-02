@@ -68,16 +68,6 @@ describe('flags', () => {
 
 describe('9x9', () => {
   fastlist('1303 8972', ['TimesTable', '10K']);
-  fastlist('0000', [
-    '00XX',
-    '0X0X',
-    '0XX0',
-    '0XXX',
-    '10K',
-    'AAAA',
-    'X0X0',
-    'XX00',
-  ]);
 });
 
 describe('360deg', () => {
@@ -122,4 +112,17 @@ describe('Stock', () => {
 
 describe('xxx', () => {
   fastlist('0102 0204', ['0X0X', 'MMDD', '10K', '0XXX']);
+});
+
+describe('kings of number', () => {
+  fastlist('0000', [
+    '00XX',
+    '0X0X',
+    '0XX0',
+    '0XXX',
+    '10K',
+    'AAAA',
+    'X0X0',
+    'XX00',
+  ]);
 });
