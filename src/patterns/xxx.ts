@@ -23,7 +23,7 @@ const xxxptns = [
   'XXXX69',
 ];
 
-const xxxfunc: PatternFunc = (input) => {
+export const xxxfunc: PatternFunc = (input) => {
   const output: string[] = [];
   xxxptns.forEach((ptn) => {
     const regptn = `^${ptn.replaceAll('X', '\\d')}$`;
@@ -34,5 +34,3 @@ const xxxfunc: PatternFunc = (input) => {
 
   return output;
 };
-
-module.exports = xxxfunc;

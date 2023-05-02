@@ -12,7 +12,7 @@ const regs: [RegExp, string][] = [
   [/^0x[0-9a-f]{3}$/, '3Hex'],
 ];
 
-const regfunc: PatternFunc = (input) => {
+export const regfunc: PatternFunc = (input) => {
   const output: string[] = [];
 
   regs.forEach((rg) => {
@@ -23,5 +23,3 @@ const regfunc: PatternFunc = (input) => {
 
   return output;
 };
-
-module.exports = abcfunc;

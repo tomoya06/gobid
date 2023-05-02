@@ -1,4 +1,4 @@
-const nynyfunc: PatternFunc = (input) => {
+export const nynyfunc: PatternFunc = (input) => {
   const reg = /^(\d)(\d)(\d\d)$/;
   const mat = reg.exec(input);
   if (

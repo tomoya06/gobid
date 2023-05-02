@@ -1,6 +1,6 @@
 const months = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-const datefunc: PatternFunc = (input) => {
+export const datefunc: PatternFunc = (input) => {
   const reg = /^(\d\d)(\d\d)$/;
   const mat = reg.exec(input);
   if (
@@ -13,5 +13,3 @@ const datefunc: PatternFunc = (input) => {
   }
   return [];
 };
-
-module.exports = datefunc;

@@ -14,7 +14,7 @@ const strptns: [RegExp, number, number, string][] = [
   [/^\d{5}$/, 1, 4, 'XABCD'],
 ];
 
-const straightfunc: PatternFunc = (input: string) => {
+export const straightfunc: PatternFunc = (input: string) => {
   const output: string[] = [];
   strptns.forEach((ptn) => {
     if (ptn[0].test(input) && isStraight(input, ptn[1], ptn[2])) {
@@ -24,5 +24,3 @@ const straightfunc: PatternFunc = (input: string) => {
 
   return output;
 };
-
-module.exports = abcfunc;

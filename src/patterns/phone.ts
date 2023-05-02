@@ -43,7 +43,7 @@ const phonePrefixes = [
   '191',
 ];
 
-const phonefunc: PatternFunc = (input) => {
+export const phonefunc: PatternFunc = (input) => {
   const mat = /^(\d{3})(\d{8})$/.exec(input);
   if (
     mat &&

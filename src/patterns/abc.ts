@@ -51,7 +51,7 @@ const validPtns = [
   'ABBCBBA',
 ];
 
-const abcfunc: PatternFunc = (input) => {
+export const abcfunc: PatternFunc = (input) => {
   if (!/^\d+$/.test(input)) {
     return [];
   }
@@ -72,5 +72,3 @@ const abcfunc: PatternFunc = (input) => {
 
   return [];
 };
-
-module.exports = abcfunc;
