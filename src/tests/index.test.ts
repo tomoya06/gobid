@@ -72,7 +72,7 @@ describe('9x9', () => {
 
 describe('360deg', () => {
   fastlist('110° 054°', ['360Degree']);
-  fastlist('370°', []);
+  fastlist('370° 000°', []);
 });
 
 describe('date', () => {

@@ -2,7 +2,7 @@ const degptn = /^(\d{3})°$/;
 
 export const degfunc: PatternFunc = (input) => {
   const mat = degptn.exec(input);
-  if (mat && mat[0] && Number(mat[1]) <= 360) {
+  if (mat && mat[0] && Number(mat[1]) <= 360 && Number(mat[1]) > 0) {
     return ['360Degree'];
   }
 
