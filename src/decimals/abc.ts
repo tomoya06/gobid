@@ -17,8 +17,6 @@ const validPtns = [
   'ABCC',
   'ABBC',
   'AAAAA',
-  // FIXME:
-  // 'ABCDE',
   'ABBBB',
   'AABBB',
   'AAABB',

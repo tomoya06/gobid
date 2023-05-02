@@ -7,16 +7,16 @@ function isStraight(input: string, lo: number, hi: number): boolean {
   return true;
 }
 
-const ptns: [RegExp, number, number, string][] = [
+const strptns: [RegExp, number, number, string][] = [
   [/^\d{3}$/, 0, 2, 'ABC'],
   [/^\d{4}$/, 0, 3, 'ABCD'],
-  [/^\d{5}$/, 1, 4, 'ABCDE'],
-  [/^\d{5}$/, 0, 4, 'XABCD'],
+  [/^\d{5}$/, 0, 4, 'ABCDE'],
+  [/^\d{5}$/, 1, 4, 'XABCD'],
 ];
 
 const straightfunc: PatternFunc = (input: string) => {
   const output: string[] = [];
-  ptns.forEach((ptn) => {
+  strptns.forEach((ptn) => {
     if (ptn[0].test(input) && isStraight(input, ptn[1], ptn[2])) {
       output.push(ptn[3]);
     }
