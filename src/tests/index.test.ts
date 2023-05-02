@@ -59,4 +59,21 @@ describe('langs', () => {
     .split(' ')
     .forEach((c) => fastcase(c, ['999CN']));
   fastcase('零零零', ['999JP', '999CN']);
+  fastcase('零零壱壱', []);
+  fastcase('٠٨٠٠٨٠', []);
+});
+
+// FIXME: ??
+describe('flags', () => {
+  fastcase('🇨🇳123', ['Flag999']);
+  fastcase('🇨🇳8144', []);
+});
+
+describe('9x9', () => {
+  '1303 8972'.split(' ').forEach((c) => fastcase(c, ['TimesTable', '10K']));
+});
+
+describe('360deg', () => {
+  '110° 054°'.split(' ').forEach((c) => fastcase(c, ['360Degree']));
+  '370°'.split(' ').forEach((c) => fastcase(c, []));
 });

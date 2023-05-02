@@ -4,7 +4,6 @@ const validPtns = [
   'ABB',
   'ABA',
   'AAB',
-  'ABCD',
   'AAAA',
   'ABBB',
   'AABB',

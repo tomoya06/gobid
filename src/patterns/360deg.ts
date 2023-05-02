@@ -1,4 +1,4 @@
-const degptn = /^\d\d\d°$/;
+const degptn = /^(\d{3})°$/;
 
 export const degfunc: PatternFunc = (input) => {
   const mat = degptn.exec(input);
