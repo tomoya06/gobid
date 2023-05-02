@@ -17,6 +17,7 @@ const validPtns = [
   'ABCC',
   'ABBC',
   'AAAAA',
+  // FIXME:
   // 'ABCDE',
   'ABBBB',
   'AABBB',
@@ -52,7 +53,7 @@ const validPtns = [
   'ABBCBBA',
 ];
 
-const fn: PatternFunc = (input) => {
+const abcfunc: PatternFunc = (input) => {
   const visited: Record<string, number> = {};
   let cnt = 0;
   let myptn = '';
@@ -69,3 +70,5 @@ const fn: PatternFunc = (input) => {
 
   return [];
 };
+
+module.exports = abcfunc;
