@@ -1,9 +1,13 @@
 import { detectPatterns } from '../index';
 
-const fastcase = (input: string, output: string[]) => {
-  test(`${input}.bit -> "${output}"`, () => {
-    expect(detectPatterns(`${input}.bit`)).toStrictEqual(new Set(output));
+const nativecase = (input: string, output: string[]) => {
+  test(`${input} -> "${output}`, () => {
+    expect(detectPatterns(input)).toStrictEqual(new Set(output));
   });
+};
+
+const fastcase = (input: string, output: string[]) => {
+  nativecase(`${input}.bit`, output);
 };
 
 const fastlist = (inputs: string, output: string[]) => {
@@ -11,32 +15,20 @@ const fastlist = (inputs: string, output: string[]) => {
 };
 
 describe('invalid name', () => {
-  fastcase('test', []);
+  nativecase('test', []);
+  nativecase('notbid', []);
+  nativecase('not.bid', []);
+  nativecase('not123.bid', []);
 });
 
 describe('official cases', () => {
-  test('invalid names', () => {
-    expect(detectPatterns('notabit')).toStrictEqual(new Set());
-    expect(detectPatterns('not.bit')).toStrictEqual(new Set());
-  });
-
-  test('official cases', () => {
-    expect(detectPatterns('333.bit')).toStrictEqual(new Set(['AAA', '999']));
-    expect(detectPatterns('2112.bit')).toStrictEqual(new Set(['ABBA', '10K']));
-    expect(detectPatterns('45555.bit')).toStrictEqual(
-      new Set(['ABBBB', '100K'])
-    );
-    expect(detectPatterns('888000.bit')).toStrictEqual(
-      new Set(['AAABBB', 'XXX000'])
-    );
-    expect(detectPatterns('0098.bit')).toStrictEqual(
-      new Set(['10K', 'AABC', '0XXX', '00XX'])
-    );
-    expect(detectPatterns('0x9832.bit')).toStrictEqual(new Set(['0x10K']));
-    expect(detectPatterns('0311.bit')).toStrictEqual(
-      new Set(['ABCC', '0XXX', '10K', 'MMDD'])
-    );
-  });
+  fastlist('333', ['AAA', '999']);
+  fastlist('2112', ['ABBA', '10K']);
+  fastlist('45555', ['ABBBB', '100K']);
+  fastlist('888000', ['AAABBB', 'XXX000']);
+  fastlist('0098', ['10K', 'AABC', '0XXX', '00XX']);
+  fastlist('0x9832', ['0x10K']);
+  fastlist('0311', ['ABCC', '0XXX', '10K', 'MMDD']);
 });
 
 describe('straights', () => {
@@ -64,13 +56,14 @@ describe('langs', () => {
     ['999CN']
   );
   fastcase('零零零', ['999JP', '999CN']);
-  fastcase('零零壱壱', []);
-  fastcase('٠٨٠٠٨٠', []);
+  fastcase('零零壱壱 零壱 零四 四', []);
+  fastlist('٠٨٠٠٨٠ ٠٨', []);
 });
 
 describe('flags', () => {
   fastlist('🇨🇳123 🇺🇸121 🇺🇸122 🇦🇪202 🇦🇪203', ['Flag999']);
   fastlist('🇨🇳8144', []);
+  fastlist('🔥144 🏎000', []);
 });
 
 describe('9x9', () => {
