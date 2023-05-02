@@ -84,6 +84,7 @@ describe('date', () => {
 
 describe('phone', () => {
   fastlist('18111111111 13022222222 13266666666', ['XXXAAAAAAAA']);
+  fastlist('10911111111 13022322222 13266667666', []);
 });
 
 describe('reg', () => {
@@ -106,6 +107,7 @@ describe('Stock', () => {
   fastlist('600169', ['AShareCode', 'XXXX69']);
   fastlist('000996 000997 000998', ['AShareCode', '000XXX']);
   fastlist('600001 600002 600003 600004 600005', ['AShareCode', 'ABBBBC']);
+  fastlist('610001', []);
 });
 
 describe('xxx', () => {
