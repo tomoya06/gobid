@@ -115,4 +115,6 @@ describe('Stock', () => {
   fastlist('600001 600002 600003 600004 600005', ['AShareCode', 'ABBBBC']);
 });
 
-describe('xxx', () => {});
+describe('xxx', () => {
+  fastlist('0102 0204', ['0X0X', 'MMDD', '10K', '0XXX']);
+});
