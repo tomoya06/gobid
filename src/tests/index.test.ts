@@ -15,6 +15,10 @@ const fastlist = (inputs: string, output: string[]) => {
 };
 
 describe('invalid name', () => {
+  nativecase(undefined as unknown as string, []);
+  nativecase(null as unknown as string, []);
+  nativecase([] as unknown as string, []);
+  nativecase({} as unknown as string, []);
   nativecase('test', []);
   nativecase('notbid', []);
   nativecase('not.bid', []);

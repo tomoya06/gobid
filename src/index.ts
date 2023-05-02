@@ -1,7 +1,7 @@
 import * as allfuncs from './patterns/index';
 
 function getBaseInput(name: string): string {
-  return /^(.+)\.bit$/.exec(name)?.[1] || '';
+  return /^(.+)\.bit$/.exec(`${name}`)?.[1] || '';
 }
 
 export function detectPatterns(name: string): Set<string> {
