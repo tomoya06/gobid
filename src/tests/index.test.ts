@@ -93,6 +93,15 @@ describe('phone', () => {
 
 describe('reg', () => {
   fastlist('4860000 9760000 9580000', ['WanClub']);
+  fastlist('00000', [
+    '100K',
+    'XXX00',
+    '00XXX',
+    '00XX0',
+    'XX000',
+    '000XX',
+    'AAAAA',
+  ]);
   fastlist('48600000 48600001', []);
   fastlist('0x0 0x1 0x2 0x3 0x4 0x5 0x6 0x7 0x8 0x9', ['0x9', '1Hex']);
   fastlist('0xa 0xb 0xc 0xd 0xe 0xf', ['1Hex']);

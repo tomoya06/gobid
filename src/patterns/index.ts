@@ -8,4 +8,5 @@ export * from './phone';
 export * from './reg';
 export * from './stock';
 export * from './straight';
+export * from './wan';
 export * from './xxx';
