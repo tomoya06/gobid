@@ -1,6 +1,5 @@
 const validPtns = [
   'AAA',
-  'ABC',
   'ABB',
   'ABA',
   'AAB',
