@@ -24,7 +24,7 @@ describe('invalid name', () => {
   nativecase('not.bid', []);
   nativecase('not123.bid', []);
   nativecase('not123.bit', []);
-  nativecase('123.bit', []);
+  nativecase('123', []);
 });
 
 describe('official cases', () => {
