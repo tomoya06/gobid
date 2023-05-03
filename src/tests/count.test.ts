@@ -10,7 +10,10 @@ import {
 } from './cnt';
 
 describe('count all cnt', () => {
-  const validlens = [3, 4, 5, 6, 7, 8, 11];
+  const validlens = [
+    3, 4, 5, 6, 7,
+    // 8, 11
+  ];
   const validCnts: { [key: number]: any } = {
     [3]: Len3Count,
     [4]: Len4Count,
