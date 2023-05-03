@@ -23,16 +23,18 @@ describe('invalid name', () => {
   nativecase('notbid', []);
   nativecase('not.bid', []);
   nativecase('not123.bid', []);
+  nativecase('not123.bit', []);
+  nativecase('123.bit', []);
 });
 
 describe('official cases', () => {
-  fastlist('333', ['AAA', '999']);
-  fastlist('2112', ['ABBA', '10K']);
-  fastlist('45555', ['ABBBB', '100K']);
-  fastlist('888000', ['AAABBB', 'XXX000']);
-  fastlist('0098', ['10K', 'AABC', '0XXX', '00XX']);
-  fastlist('0x9832', ['0x10K']);
-  fastlist('0311', ['ABCC', '0XXX', '10K', 'MMDD']);
+  nativecase('333.bit', ['AAA', '999']);
+  nativecase('2112.bit', ['ABBA', '10K']);
+  nativecase('45555.bit', ['ABBBB', '100K']);
+  nativecase('888000.bit', ['AAABBB', 'XXX000']);
+  nativecase('0098.bit', ['10K', 'AABC', '0XXX', '00XX']);
+  nativecase('0x9832.bit', ['0x10K']);
+  nativecase('0311.bit', ['ABCC', '0XXX', '10K', 'MMDD']);
 });
 
 describe('straights', () => {
