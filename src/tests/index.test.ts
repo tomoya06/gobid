@@ -38,6 +38,7 @@ describe('official cases', () => {
 });
 
 describe('straights', () => {
+  fastlist('123 234', ['ABC', '999']);
   fastlist('1234 2345 3456 4567 5678 6789', ['ABCD', '10K']);
   fastcase('0123', ['ABCD', '10K', 'MMDD', '0XXX']);
   fastlist('01234 12345 23456 34567 45678 56789', ['ABCDE', '100K', 'XABCD']);
