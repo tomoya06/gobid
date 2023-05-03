@@ -112,6 +112,8 @@ describe('reg', () => {
   );
   fastlist('0xff9 0xffa 0xffb 0xffc 0xffd 0xffe 0xfff', ['3Hex']);
   fastlist('0x020 0x021 0x022', ['0x999', '3Hex']);
+  fastlist('11112222 44441111', ['AAAABBBB']);
+  fastlist('11122222 44444111', []);
 });
 
 describe('Stock', () => {

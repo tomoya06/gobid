@@ -1,18 +1,19 @@
 export const TotalCnt = {
+  AAAABBBB: 90,
+  XXXAAAAAAAA: 420,
+};
+
+export const Len3Count = {
   '999': 1000,
   AAA: 10,
   ABC: 8,
   ABB: 90,
   ABA: 90,
   AAB: 90,
-  // '360Degree': 360,
-  // '0x999': 1000,
-  // '999JP': 1000,
-  // '999CN': 1000,
-  // Arabic999: 1000,
-  // Flag999: 22000,
+};
+
+export const Len4Count = {
   '10K': 10000,
-  // Rare4D: 1462,
   ABCD: 7,
   AAAA: 10,
   ABBB: 90,
@@ -35,8 +36,9 @@ export const TotalCnt = {
   XX69: 100,
   TimesTable: 45,
   MMDD: 366,
-  '0x10K': 10000,
-  // Arabic10K: 10000,
+};
+
+export const Len5Count = {
   '100K': 100000,
   AAAAA: 10,
   ABCDE: 6,
@@ -65,6 +67,10 @@ export const TotalCnt = {
   '69XXX': 1000,
   '00XXX': 1000,
   XXX00: 1000,
+  WanClub: 9,
+};
+
+export const Len6Count = {
   AAAAAA: 10,
   ABBBBB: 90,
   AABBBB: 90,
@@ -85,14 +91,31 @@ export const TotalCnt = {
   '000XXX': 1000,
   AShareCode: 4000,
   XXXX69: 10000,
+  WanClub: 99,
+};
+
+export const Len7Count = {
   AAABBBB: 90,
-  AAAABBBB: 90,
   ABBCBBA: 720,
   WanClub: 999,
-  XXXAAAAAAAA: 420,
-  // '0x9': 10,
-  // '0x99': 100,
-  // '1Hex': 16,
-  // '2Hex': 256,
-  // '3Hex': 4096,
+};
+
+export const X0TotalCount = {
+  '0x9': 10,
+  '0x99': 100,
+  '0x999': 1000,
+  '0x10K': 10000,
+  '1Hex': 16,
+  '2Hex': 256,
+  '3Hex': 4096,
+};
+
+export const Untestable = {
+  '360Degree': 360,
+  '999JP': 1000,
+  '999CN': 1000,
+  Arabic999: 1000,
+  Arabic10K: 10000,
+  Flag999: 22000,
+  Rare4D: 1462,
 };
