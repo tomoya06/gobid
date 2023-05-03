@@ -1,5 +1,4 @@
 export const TotalCnt = {
-  AAAABBBB: 90,
   XXXAAAAAAAA: 420,
 };
 
@@ -98,6 +97,10 @@ export const Len7Count = {
   AAABBBB: 90,
   ABBCBBA: 720,
   WanClub: 999,
+};
+
+export const Len8Count = {
+  AAAABBBB: 90,
 };
 
 export const X0TotalCount = {
